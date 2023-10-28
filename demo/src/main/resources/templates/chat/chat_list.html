@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>過去のチャット一覧</title>
+
+<link href="/css/list.css" rel="stylesheet"></link>
+</head>
+<body>
+<h1>過去のチャット一覧</h1>
+  <table>
+  	<tr><th>ID</th><th>名前</th><th>トーク</th><th>時間</th></tr>
+    <tr th:each="list : ${chatlist}" th:object="${list}" >
+      <td th:text="*{id}"></td>
+      <td th:text="*{name}"></td>
+      <td th:text="*{talk}"></td>      
+      <td th:text="*{#dates.format(talkDate,'YYYY/MM/dd h:m:s')}"></td>
+    </tr>
+  </table>
+</body>
+</html>
