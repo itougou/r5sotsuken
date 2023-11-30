@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>顧客情報検索</h1>
-    <form th:action="@{/customer/id_search}" th:object="${customerSearchRequest}" th:method="post">
+    <form th:action="@{/customer/id_search}" th:object="${customerSearchRequest}"
+        th:method="post">
         <div>
             ID：<input type="text" name="id" size="40" />
         </div>
