@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.dto.LoginRequest;
 
-@RestController
-@RequestMapping("/J") //JSONで受けたるための指定
+@RestController	//JSONやXMLをレスポンスするようなAPI形式の場合は、@RestControllerを使う
+@RequestMapping("/J") //パスに「/J」を指定
 public class JsonController {
   @GetMapping("/get")
   public Map<String, String> hello(@ModelAttribute LoginRequest loginRequest, Model model) {
