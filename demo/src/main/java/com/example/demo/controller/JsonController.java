@@ -27,4 +27,11 @@ public class JsonController {
 	  System.out.println("loginRequest.name="+loginRequest.getName());
     return Map.of("msg", loginRequest.getName()+"さん、こんにちは。");
   }
+  @PostMapping("/post/login")
+ // public Map<String, String> hello_post(@ModelAttribute LoginRequest loginRequest, Model model) {
+  //JSON形式で受信する場合こっち @RequestBody LoginRequest loginRequest
+  public Map<String, String> login(@RequestBody LoginRequest loginRequest, Model model) {
+	  System.out.println("loginRequest.name="+loginRequest.getName());
+    return Map.of("msg", loginRequest.getName()+"さん、こんにちは。");
+  }
 }
