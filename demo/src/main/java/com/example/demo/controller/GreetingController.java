@@ -28,7 +28,7 @@ public class GreetingController {
     @SendTo("/topic/greetings")	//クライアント側の全ての/topic/greetings宛に Greetingメソッドの戻り値をブロードキャスト送信する宣言
     public Greeting greeting(HelloMessage message) throws Exception {
         Thread.sleep(1000); // simulated delay
-        System.out.println("message:"+message);
+        System.out.println("message.name:"+message.getName()+"message.message:"+message.getMessage());
         chatService.addProcess( message );
         return new Greeting(HtmlUtils.htmlEscape(message.getName())
                 + " : "
