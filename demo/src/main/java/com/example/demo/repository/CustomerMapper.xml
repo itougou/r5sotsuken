@@ -9,6 +9,10 @@
     <select id="search" resultType="com.example.demo.entity.Customer">
         SELECT * FROM Customer WHERE id = #{id}
     </select>
+    <!-- 2023.12.16 追加 -->
+    <select id="searchById" resultType="com.example.demo.entity.Customer">
+        SELECT * FROM Customer WHERE id = #{id}
+    </select>
     <insert id="add">
         INSERT INTO Customer ( name ) values ( #{name} ) 
     </insert>

@@ -14,4 +14,5 @@ public interface CustomerMapper {
     Customer search(CustomerSearchRequest customer);
     void add(Customer customer);
     List<Customer> findMany();
+    Customer searchById(int id);	//2023.12.16
 }

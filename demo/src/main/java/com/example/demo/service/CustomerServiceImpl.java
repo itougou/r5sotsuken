@@ -23,7 +23,11 @@ public class CustomerServiceImpl implements CustomerService{
     public Customer search( CustomerSearchRequest customerSearchRequest) {
         return customerMapper.search( customerSearchRequest );
     }
-    
+    //検索 by id 2023.12.16 追加
+    @Override
+    public Customer searchById( int id) {
+        return customerMapper.searchById( id );
+    }
     //データ1件追加
     @Override
     public void add( Customer customerAddRequest ) {
