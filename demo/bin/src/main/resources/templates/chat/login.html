@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>チャットログイン</h1>
+<!--<form action="/login" method="post">-->
+	
+<form th:action="@{/chat/login}" th:object="${loginRequest}" th:method="post">
+   
+お名前：<input type="text" name="name">
+<input type="submit" value="ログイン">
+</form>
+</body>
+</html>
