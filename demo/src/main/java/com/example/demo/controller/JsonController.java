@@ -33,7 +33,9 @@ public class JsonController {
   CustomerService customerService;
   @Autowired
   BbsService bbsService;
-  
+  /**
+  	掲示板
+  */
 	
   @GetMapping("/get/bbslist")
   //public Map<String, String> list(@ModelAttribute LoginRequest loginRequest, Model model) {
