@@ -33,15 +33,15 @@ public class JsonController {
   CustomerService customerService;
   @Autowired
   BbsService bbsService;
-  /**
-  	掲示板
-  */
-	
+  
+/*
+ * BBSｺﾝﾄﾛｰﾗ
+ */
   @GetMapping("/get/bbslist")
   //public Map<String, String> list(@ModelAttribute LoginRequest loginRequest, Model model) {
   public List<Bbs> list(@ModelAttribute LoginRequest loginRequest, Model model, HttpServletRequest request) {
-		System.out.println("★/get/bbslist loginRequest.name(仮のパラメータ)="+loginRequest.getName());
-
+		System.out.println("★/get/bbslist loginRequest.name( 仮のパラメータ ) = "+loginRequest.getName());
+		
 		HttpSession session = request.getSession(true);	//セッションスコープ生成
 		Customer loginCustomer = (Customer)session.getAttribute("loginCustomer");
 		System.out.println("/get/list セッションスコープ内容："+loginCustomer);
