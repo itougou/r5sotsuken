@@ -35,7 +35,7 @@ public class JsonController {
   BbsService bbsService;
   
 /*
- * BBSｺﾝﾄﾛｰﾗ　
+ * ReacNative向けBBSｺﾝﾄﾛｰﾗ― （JsonController.java）　
  */
   @GetMapping("/get/bbslist")
   //public Map<String, String> list(@ModelAttribute LoginRequest loginRequest, Model model) {
