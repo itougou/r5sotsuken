@@ -17,7 +17,7 @@ import com.example.demo.entity.Chat;
 import com.example.demo.service.ChatService;
 
 /*
- *　チャット用 WebSocketサーバー
+ *　チャット用 WebSocketサーバー　（GreetingController.java）
  */
 @Controller
 public class GreetingController {
