@@ -66,7 +66,9 @@ public class JsonController {
   public Map<String, String> login(@RequestBody LoginRequest loginRequest, Model model , HttpServletRequest request) {
 		System.out.println("★/post/login loginRequest.name="+loginRequest.getName());
   	
-		int id;
+		int id=-1;
+		System.out.println("id:"+id);
+		
 		String ret = "";
 		try{
 			id = Integer.parseInt( loginRequest.getName() ) ;	
