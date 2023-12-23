@@ -84,7 +84,8 @@ public class JsonController {
 			}
 		}catch(Exception e) {
 			System.out.println("サーバー側でエラー発生:"+e);
-			ret  = "サーバー側でエラー発生:"+e;
+			// 2023.12.23 ret  = "サーバー側でエラー発生:"+e;
+			ret = "ログイン失敗";
 		}
   		return Map.of("msg", ret );
   }
