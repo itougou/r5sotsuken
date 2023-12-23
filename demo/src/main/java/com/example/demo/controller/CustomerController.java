@@ -15,7 +15,7 @@ import com.example.demo.entity.Customer;
 import com.example.demo.service.CustomerService;
 
 /**
- * 顧客情報 Controller　伊藤剛
+ * 顧客情報 Controller　伊藤剛　2023.12.23 17：17
  */
 @Controller
 public class CustomerController {
