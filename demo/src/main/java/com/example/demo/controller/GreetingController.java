@@ -16,6 +16,9 @@ import com.example.demo.bean.HelloMessage;
 import com.example.demo.entity.Chat;
 import com.example.demo.service.ChatService;
 
+/*
+ *　チャット用 WebSocketサーバー
+ */
 @Controller
 public class GreetingController {
 	@Autowired
