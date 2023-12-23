@@ -79,7 +79,8 @@ public class JsonController {
 				//model.addAttribute( "customerinfo", customer );//不要？
 			}
 		}catch(Exception e) {
-			ret  = "サーバー側でエラー発生";
+			System.out.println("サーバー側でエラー発生:"+e);
+			ret  = "サーバー側でエラー発生:"+e;
 		}
   		return Map.of("msg", ret );
   }
