@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -45,19 +46,23 @@ public class JsonController {
 		HttpSession session = request.getSession(true);	//セッションスコープ生成
 		Customer loginCustomer = (Customer)session.getAttribute("loginCustomer");
 		System.out.println("/get/list セッションスコープ内容："+loginCustomer);
+		
 		if( loginCustomer == null  ) {
-			//return new ArrayList<Customer>();
 			return new ArrayList<Bbs>();
 		}
+
 		List<Bbs> bbs = bbsService.getBbsProcess();
-		
+		System.out.println("bbs.size():"+bbs.size());
+	
 		for( Bbs b : bbs) {
 			System.out.println("bbs-list:"+b);
 		}
+		if( bbs.size() == 0 ) {
+			bbs = new ArrayList<Bbs>();
+			bbs.add( new Bbs( "ICC-BBSｼｽﾃﾑ" ,"ｺﾝﾆﾁﾜ"+loginCustomer.getName()+"ｻﾝ。私ﾊ、ICC-BBSｼｽﾃﾑﾃﾞｽ。何ｶ投稿ｼﾃｸﾀﾞｻｲ。ｿｳｽﾚﾊﾞ、ｺﾉﾒｯｾｰｼﾞﾊ、消ｴﾏｽ。", new Date() ) );
+		}
 
 		return bbs;
-		//return customer;
-		//return new ArrayList<Customer>();
   }
 
   @PostMapping("/post/login")
