@@ -59,7 +59,7 @@ public class JsonController {
 		}
 		if( bbs.size() == 0 ) {
 			bbs = new ArrayList<Bbs>();
-			bbs.add( new Bbs( "ICC-BBSｼｽﾃﾑ" ,"ｺﾝﾆﾁﾜ"+loginCustomer.getName()+"ｻﾝ。私ﾊ、ICC-BBSｼｽﾃﾑﾃﾞｽ。何ｶ投稿ｼﾃｸﾀﾞｻｲ。ｿｳｽﾚﾊﾞ、ｺﾉﾒｯｾｰｼﾞﾊ、消ｴﾏｽ。", new Date() ) );
+			bbs.add( new Bbs( "ICC-BBSｼｽﾃﾑ" ,"ｺﾝﾆﾁﾜ"+loginCustomer.getName()+"ｻﾝ。私ﾊ、ICC-BBSｼｽﾃﾑﾃﾞｽ。何ｶ投稿ｼﾃｸﾀﾞｻｲ。ｿｳｽﾚﾊﾞ、ｺﾉﾒｯｾｰｼﾞﾊ、二度ﾄ表示ｻﾚﾅｸﾅﾘﾏｽ。", new Date() ) );
 		}
 
 		return bbs;
